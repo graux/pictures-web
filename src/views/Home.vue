@@ -1,18 +1,28 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <section class="section section-home">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-half">
+          <LoginBox />
+        </div>
+        <div class="column is-half">
+          <RegistrationBox />
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+
+import LoginBox from '../components/LoginBox'
+import RegistrationBox from '../components/RegistrationBox'
 
 export default {
   name: 'home',
-  components: {
-    HelloWorld
+  components: { RegistrationBox, LoginBox },
+  async created () {
+    this.$ls.clear()
   }
 }
 </script>

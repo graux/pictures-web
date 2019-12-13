@@ -1,0 +1,77 @@
+html {
+  background: #CCCCCC;
+  min-height: 100vh;
+}
+
+body {
+  min-height: 100vh;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+.image-tags, .image-buttons {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 1;
+}
+
+.image-buttons {
+  right: unset;
+  left: 1rem;
+}
+
+.image.avatar img {
+  border-radius: 100%;
+  box-shadow: 0 0 0.1rem rgba(0, 0, 0, 0.2), 0 0 0.5rem rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.is-fullheight {
+  min-height: 100%;
+}
+
+.sidebar {
+  min-height: calc(100vh - 6rem);
+  display: flex;
+}
+
+.chat-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  min-width: 100%;
+
+  .chat-area {
+    flex-grow: 2;
+    height: 100%;
+    min-height: min-content;
+  }
+
+  .chat-form {
+    flex-grow: 1;
+  }
+}
+
+.profile-image {
+  display: block;
+  max-width: 500px;
+  margin: 0 auto 2rem !important;
+}
+
+.is-grouped.is-centered {
+  justify-content: center;
+}
+
+.upload-wrapper {
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  width: 100%;
+
+  a {
+    margin: 0 auto;
+  }
+}
